@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disaster Management System - Settings</title>
+    <link rel="stylesheet" href="settings.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Settings</h1>
+            <button id="saveChanges">Save Changes</button>
+        </div>
+
+        <div class="tabs">
+            <button class="tab-button active" data-tab="notifications">
+                <i data-lucide="bell"></i> Notifications
+            </button>
+            <button class="tab-button" data-tab="security">
+                <i data-lucide="shield"></i> Security
+            </button>
+            <button class="tab-button" data-tab="users">
+                <i data-lucide="users"></i> User Management
+            </button>
+            <button class="tab-button" data-tab="system">
+                <i data-lucide="globe"></i> System
+            </button>
+            <button class="tab-button" data-tab="database">
+                <i data-lucide="database"></i> Database
+            </button>
+            <button class="tab-button" data-tab="alerts">
+                <i data-lucide="alert-triangle"></i> Alert Settings
+            </button>
+        </div>
+
+        <div class="tab-content active" id="notifications">
+            <div class="card">
+                <div class="card-header">
+                    <h2>Notification Preferences</h2>
+                    <p>Configure how you want to receive notifications about disasters and emergencies</p>
+                </div>
+                <div class="card-content">
+                    <div class="setting">
+                        <div>
+                            <label for="emailNotifications">Email Notifications</label>
+                            <p>Receive notifications via email</p>
+                        </div>
+                        <label class="switch">
+                            <input type="checkbox" id="emailNotifications" checked>
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                    <div class="setting">
+                        <div>
+                            <label for="smsNotifications">SMS Notifications</label>
+                            <p>Receive notifications via SMS</p>
+                        </div>
+                        <label class="switch">
+                            <input type="checkbox" id="smsNotifications">
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                    <div class="setting">
+                        <div>
+                            <label for="pushNotifications">Push Notifications</label>
+                            <p>Receive push notifications</p>
+                        </div>
+                        <label class="switch">
+                            <input type="checkbox" id="pushNotifications" checked>
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="tab-content" id="security">
+            <div class="card">
+                <div class="card-header">
+                    <h2>Security Settings</h2>
+                    <p>Manage your security preferences and access controls</p>
+                </div>
+                <div class="card-content">
+                    <div class="setting">
+                        <label for="twoFactor">Two-Factor Authentication</label>
+                        <select id="twoFactor">
+                            <option value="sms">SMS Authentication</option>
+                            <option value="email">Email Authentication</option>
+                            <option value="authenticator">Authenticator App</option>
+                        </select>
+                    </div>
+                    <div class="setting">
+                        <label for="sessionTimeout">Session Timeout (minutes)</label>
+                        <input type="number" id="sessionTimeout" value="30">
+                    </div>
+                    <button class="secondary-button">Reset Password</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="tab-content" id="users">
+            <div class="card">
+                <div class="card-header">
+                    <h2>User Management</h2>
+                    <p>Manage user roles and permissions</p>
+                </div>
+                <div class="card-content">
+                    <div class="setting">
+                        <label for="defaultRole">Default User Role</label>
+                        <select id="defaultRole">
+                            <option value="admin">Administrator</option>
+                            <option value="manager">Manager</option>
+                            <option value="viewer" selected>Viewer</option>
+                        </select>
+                    </div>
+                    <div class="setting">
+                        <label for="userRegistration">User Registration</label>
+                        <select id="userRegistration">
+                            <option value="open">Open Registration</option>
+                            <option value="approval" selected>Require Approval</option>
+                            <option value="closed">Closed</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="tab-content" id="system">
+            <div class="card">
+                <div class="card-header">
+                    <h2>System Settings</h2>
+                    <p>Configure system-wide settings and preferences</p>
+                </div>
+                <div class="card-content">
+                    <div class="setting">
+                        <label for="systemLanguage">System Language</label>
+                        <select id="systemLanguage">
+                            <option value="en" selected>English</option>
+                            <option value="es">Spanish</option>
+                            <option value="fr">French</option>
+                        </select>
+                    </div>
+                    <div class="setting">
+                        <label for="timeZone">Time Zone</label>
+                        <select id="timeZone">
+                            <option value="utc" selected>UTC</option>
+                            <option value="est">EST</option>
+                            <option value="pst">PST</option>
+                        </select>
+                    </div>
+                    <div class="setting">
+                        <label for="dataRetention">Data Retention Period (days)</label>
+                        <input type="number" id="dataRetention" value="90">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="tab-content" id="database">
+            <div class="card">
+                <div class="card-header">
+                    <h2>Database Settings</h2>
+                    <p>Manage database configurations and backups</p>
+                </div>
+                <div class="card-content">
+                    <div class="setting">
+                        <label for="backupFrequency">Backup Frequency</label>
+                        <select id="backupFrequency">
+                            <option value="hourly">Hourly</option>
+                            <option value="daily" selected>Daily</option>
+                            <option value="weekly">Weekly</option>
+                        </select>
+                    </div>
+                    <div class="setting">
+                        <label for="backupRetention">Backup Retention (days)</label>
+                        <input type="number" id="backupRetention" value="30">
+                    </div>
+                    <button class="secondary-button">Backup Now</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="tab-content" id="alerts">
+            <div class="card">
+                <div class="card-header">
+                    <h2>Alert Settings</h2>
+                    <p>Configure disaster alert thresholds and parameters</p>
+                </div>
+                <div class="card-content">
+                    <div class="setting">
+                        <label for="alertPriority">Alert Priority Levels</label>
+                        <select id="alertPriority">
+                            <option value="high" selected>High</option>
+                            <option value="medium">Medium</option>
+                            <option value="low">Low</option>
+                        </select>
+                    </div>
+                    <div class="setting">
+                        <label for="alertRadius">Alert Radius (km)</label>
+                        <input type="number" id="alertRadius" value="5">
+                    </div>
+                    <div class="setting">
+                        <label for="autoEscalation">Auto-escalation Delay (minutes)</label>
+                        <input type="number" id="autoEscalation" value="15">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="settings.js"></script>
+</body>
+</html>

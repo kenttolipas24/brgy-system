@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="pic/cawayan transparent.png" type="image/x-icon">
+  <title>Barangay Management System</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="alerts and warning.css">
+</head>
+<body>
+ <!-- top navbar -->
+ <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img src="pic/cawayan transparent.png" class="logo-a" alt="Logo">
+        <span class="ml-2">Disaster Management System</span>
+      </a>
+
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <i class="fas fa-exclamation-triangle"></i>
+              <span class="badge badge-danger">3</span>
+            </a>
+
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="alertsDropdown">
+              <a class="dropdown-item" href="#">Alert 1</a>
+              <a class="dropdown-item" href="#">Alert 2</a>
+              <a class="dropdown-item" href="#">Alert 3</a>
+            </div>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="notificationsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <i class="fas fa-bell"></i>
+              <span class="badge badge-warning">2</span>
+            </a>
+
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="notificationsDropdown">
+              <a class="dropdown-item" href="#">Notification 1</a>
+              <a class="dropdown-item" href="#">Notification 2</a>
+            </div>
+          </li>
+
+          <li class="nav-item">
+            <form class="form-inline my-2 my-lg-0">
+              <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            </form>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <i class="fas fa-user"></i> admin
+            </a>
+
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
+              <a class="dropdown-item" href="profile.html">Profile</a>
+              <a class="dropdown-item" href="settings.html">Settings</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#"><i class="fas fa-sign-out-alt"></i> Logout</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- top navbar -->
+
+  <!-- side container -->
+  <div class="container-fluid">
+    <div class="row">
+      <nav class="col-md-2 d-none d-md-block bg-light sidebar">
+        <div class="sidebar-sticky">
+          <h5 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
+            <span>Disaster Management</span>
+            <a class="d-flex align-items-center text-muted" href="#" aria-label="Add a new report">
+              <i class="fas fa-plus-circle"></i>
+            </a>
+          </h5>
+          <ul class="nav flex-column">
+            <li class="nav-item">
+              <a class="nav-link" href="admin.html" id="dashboardLink">
+                <i class="fas fa-tachometer-alt"></i>
+                Dashboard
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Resident-List.html" id="affectedAreasLink">
+                <i class="fas fa-users"></i>
+                Resident List
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Response team.html" id="responseTeamsLink">
+                <i class="fas fa-user-tie"></i>
+                Response Teams
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="alerts and warning.html" id="alertsWarningsLink">
+                <i class="fas fa-bullhorn"></i>
+                Alerts & Warnings
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Relief-Funds.html" id="reliefFundsLink">
+                <i class="fas fa-money-bill-alt"></i>
+                Relief Funds
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Community-Requests.html" id="communityRequestsLink">
+                <i class="fas fa-comments"></i>
+                Community Requests
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+<!-- side container -->
+      
+<!-- Main content area -->
+<main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+    <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+      <h1 class="h2">Alerts and Warnings</h1>
+      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#newAlertModal">
+        Upload
+      </button>
+    </div>
+  
+<div class="row">      
+<!-- Safety Tips -->
+<div class="col-md-6">
+  <div class="card">
+    <div class="card-header">
+      <h5 class="card-title">Safety Tips</h5>
+    </div>
+    <div class="card-body" id="safetyTipsContainer">
+      <!-- Safety tips will be loaded dynamically here -->
+    </div>
+  </div>
+</div>
+<!-- Disaster Preparedness -->
+<div class="col-md-6">
+  <div class="card">
+    <div class="card-header">
+      <h5 class="card-title">Disaster Preparedness</h5>
+    </div>
+    <div class="card-body" id="preparednessContainer">
+      <!-- Disaster preparedness resources will be loaded dynamically here -->
+    </div>
+  </div>
+</div>
+<!-- Weather Information -->
+<div class="col-md-6">
+  <div class="card">
+    <div class="card-header">
+      <h5 class="card-title">Weather Information</h5>
+    </div>
+    <div class="card-body">
+      <div id="weatherContainer">
+        <h6>Brgy. Cawayan Catarman N. Samar</h6>
+        <div id="weatherData">
+          <p>Loading weather data...</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<!-- Weather Information -->
+
+<!-- Main content area -->
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <!--script src="alerts and warning.js"></script-->
+</body>
+</html>
+
+<script>
+const announcementRows = document.querySelectorAll('.announcement-row');
+const itemsPerPage = 5;
+let currentPage = 1;
+
+  // Function to get current weather
+  function getCurrentWeather(city) {
+    const apiKey = 'dc198ef341b6539aab9b74f269c98aa1'; // Replace with your OpenWeatherMap API key
+    const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+
+    return fetch(apiUrl)
+      .then(response => response.json())
+      .then(data => {
+        const weatherInfo = {
+          temperature: data.main.temp,
+          description: data.weather[0].description,
+          icon: data.weather[0].icon
+        };
+        return weatherInfo;
+      })
+      .catch(error => {
+        console.error('Error fetching weather:', error);
+        return null;
+      });
+  }
+
+  // Display current weather
+  const weatherContainer = document.getElementById('weatherData'); // Corrected ID
+  const city = 'Catarman, Northern Samar, Philippines'; // Corrected city
+  getCurrentWeather(city)
+    .then(weather => {
+      if (weather) {
+        const weatherHTML = `
+          <div>
+            <p>Temperature: ${weather.temperature}°C</p>
+            <p>Description: ${weather.description}</p>
+            <img src="http://openweathermap.org/img/w/${weather.icon}.png" alt="Weather Icon">
+          </div>
+        `;
+        weatherContainer.innerHTML = weatherHTML;
+      } else {
+        weatherContainer.innerHTML = '<p>Error fetching weather</p>';
+      }
+    });
+
+function showPage(page) {
+  const startIndex = (page - 1) * itemsPerPage;
+  const endIndex = startIndex + itemsPerPage;
+
+  announcementRows.forEach((row, index) => {
+    if (index >= startIndex && index < endIndex) {
+      row.style.display = '';
+    } else {
+      row.style.display = 'none';
+    }
+  });
+}
+
+// Add event listeners to pagination controls
+const paginationLinks = document.querySelectorAll('.pagination .page-link');
+paginationLinks.forEach(link => {
+  link.addEventListener('click', (e) => {
+    e.preventDefault();
+    const page = parseInt(e.target.textContent);
+    if (!isNaN(page)) {
+      currentPage = page;
+      showPage(currentPage);
+    }
+  });
+});
+
+// Initial page load
+showPage(currentPage);
+
+// Sidebar link functionality
+const sidebarLinks = document.querySelectorAll('.sidebar .nav-link');
+sidebarLinks.forEach(link => {
+  link.addEventListener('click', () => {
+    sidebarLinks.forEach(link => link.classList.remove('active'));
+    link.classList.add('active');
+  });
+});
+
+// Function to fetch safety tips
+function fetchSafetyTips() {
+  // Simulated data for safety tips
+  const safetyTipsData = [
+    { title: 'Fire Safety', description: 'Keep flammable items away from heat sources.' },
+    { title: 'Earthquake Preparedness', description: 'Identify safe spots in each room of your house.' },
+    { title: 'Flood Safety', description: 'Avoid walking or driving through floodwaters.' },
+    { title: 'Emergency Contacts', description: 'Have a list of emergency contacts readily available.' },
+    { title: 'Home Safety', description: 'Ensure that heavy furniture and appliances are secured.' }
+    // Add more safety tips as needed
+  ];
+
+  // Update safety tips container with fetched data
+  const safetyTipsContainer = document.getElementById('safetyTipsContainer');
+  safetyTipsContainer.innerHTML = safetyTipsData.map(tip => `
+    <div class="safety-tip">
+      <h6>${tip.title}</h6>
+      <p>${tip.description}</p>
+    </div>
+  `).join('');
+}
+
+// Function to fetch disaster preparedness resources
+function fetchPreparednessResources() {
+  // Simulated data for disaster preparedness resources
+  const preparednessData = [
+    { title: 'Emergency Kit Checklist', description: 'Ensure you have enough food, water, and supplies for at least three days.' },
+    { title: 'Evacuation Plan', description: 'Identify evacuation routes and meeting points for your family.' },
+    { title: 'Shelter Information', description: 'Know the locations of nearby shelters and their capacities.' },
+    { title: 'Medical Preparedness', description: 'Keep a first-aid kit and necessary medications accessible.' },
+    { title: 'Communication Plan', description: 'Establish a communication plan with family and friends in case of separation.' }
+    // Add more preparedness resources as needed
+  ];
+
+  // Update preparedness container with fetched data
+  const preparednessContainer = document.getElementById('preparednessContainer');
+  preparednessContainer.innerHTML = preparednessData.map(resource => `
+    <div class="preparedness-resource">
+      <h6>${resource.title}</h6>
+      <p>${resource.description}</p>
+    </div>
+  `).join('');
+}
+
+// Call functions to fetch and display safety tips and disaster preparedness resources
+fetchSafetyTips();
+fetchPreparednessResources();
+
+</script>

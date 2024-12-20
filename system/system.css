@@ -1,0 +1,251 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(rgba(84, 169, 71), rgba(73, 147, 62), rgba(73, 147, 62), rgba(34, 69, 28));
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    background: rgb(46, 131, 33);
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logo-link {
+    display: inline-block;
+}
+
+.logo-a {
+    height: 50px;
+    width: auto;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    padding: 10px 15px;
+  }
+  
+  .navbar a:hover,
+  .navbar a.active {
+    color: #242424;
+  }
+
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.menu-links {
+    display: flex;
+    gap: 24px;
+    border-right: 1px solid rgba(224, 205, 205, 0.482);
+    padding-right: 24px;
+}
+
+.log-in,
+.sign-up {
+    font-weight: 500px;
+    border-radius: 18px;
+    border: none;
+    padding: 8px 16px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    background-color: rgb(255, 123, 0);
+    cursor: pointer;
+    color: white;
+
+}
+
+.log-in:hover,
+.sign-up:hover {
+    background-color: rgba(255, 123, 0, 0.877);
+}
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+}
+
+.modal-content {
+    background-color: #fff;
+    margin-top: 20px;
+    margin-left: 30%;
+    padding: 20px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 500px;
+    position: relative;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.close {
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #666;
+}
+
+.close:hover {
+    color: #000;
+}
+
+/* Form Styles */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+    font-weight: 500;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.form-group textarea {
+    height: 100px;
+    resize: vertical;
+}
+
+.form-button {
+    width: 100%;
+    padding: 12px;
+    background-color: rgb(46, 131, 33);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.form-button:hover {
+    background-color: rgb(38, 110, 27);
+}
+
+.form-footer {
+    text-align: center;
+    margin-top: 15px;
+    color: #666;
+}
+
+.form-footer span {
+    color: rgb(46, 131, 33);
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+/* Error message styles */
+.error-message {
+    color: #ff0000;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.fa-bar {
+    display: none;
+    cursor: pointer;
+}
+
+.logo {
+    max-width: 100%;
+    height: auto;
+}
+
+.h1,
+.h2,
+.p {
+    margin: 0;
+    color: #fff;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.h1 {
+    font-size: 40px;
+}
+
+.h2 {
+    font-size: 60px;
+    margin-bottom: 10px;
+}
+
+.p {
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: calc(100vh - 60px);
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    max-width: 1170px;
+    padding: 0 20px;
+}
+
+.logo-container {
+    margin-right: 40px;
+}
+
+@media (max-width: 768px) {
+    .menu-links {
+        display: none;
+    }
+
+    .fa-bar {
+        display: block;
+        font-size: 24px;
+        color: #fff;
+    }
+
+    .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .logo-container {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+}

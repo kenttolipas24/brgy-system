@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="pic/cawayan transparent.png" type="image/x-icon">
+  <title>Response Teams</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <style>
+    body {
+      font-size: .875rem;
+      padding-top: 70px; 
+    }
+    .navbar {
+      height: 60px;
+      background-color: #007bff;
+    }
+    .logo-a {
+      height: 50px;
+      width: auto;
+      max-width: 100%;
+    }
+    .sidebar {
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 100;
+      padding: 48px 0 0;
+      box-shadow: inset -1px 0 0 rgba(0, 0, 0, .1);
+      background-color: #0080ff;
+      color: #fff;
+    }
+    .sidebar-sticky {
+      position: relative;
+      top: 0;
+      height: calc(100vh - 48px);
+      padding-top: .5rem;
+      overflow-x: hidden;
+      overflow-y: auto;
+    }
+    @supports ((position: -webkit-sticky) or (position: sticky)) {
+      .sidebar-sticky {
+        position: -webkit-sticky;
+        position: sticky;
+      }
+    }
+    .sidebar .nav-link {
+      font-weight: 500;
+      color: #333;
+    }
+    .sidebar .nav-link.active {
+      color: #007bff;
+    }
+    .sidebar .nav-link:hover .feather,
+    .sidebar .nav-link.active .feather {
+      color: inherit;
+    }
+    .sidebar-heading {
+      font-size: .75rem;
+      text-transform: uppercase;
+    }
+    .navbar .form-control {
+      padding: .75rem 1rem;
+      border-width: 0;
+      border-radius: 10;
+      -webkit-border-radius: 10;
+      -moz-border-radius: 10;
+      -ms-border-radius: 10;
+      -o-border-radius: 10;
+    }
+    .btn-outline-danger {
+      color: #0076d6;
+      border-color: #0076d6;
+    }
+    .btn-outline-danger:hover {
+      color: #fff;
+      background-color: #0076d6;
+      border-color: #0076d6;
+    }
+    .btn-danger {
+      color: #fff;
+      background-color: #0076d6;
+      border-color: #0076d6;
+    }
+    .btn-danger:hover {
+      color: #fff;
+      background-color: #0076d6;
+      border-color: #0076d6;
+    }
+    @media (max-width: 767px) {
+      .sidebar {
+        width: 100%;
+        height: auto;
+        position: static;
+      }
+      .main-content {
+        margin-left: 0;
+      }
+    }
+    .card {
+      margin: 20px 0;
+    }
+  </style>
+</head>
+<body>
+  <!-- top navbar --> 
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img src="pic/cawayan transparent.png" class="logo-a" alt="Logo">
+        <span class="ml-2">Disaster Management System</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <i class="fas fa-exclamation-triangle"></i>
+              <span class="badge badge-danger">3</span>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="alertsDropdown">
+              <a class="dropdown-item" href="#">Alert 1</a>
+              <a class="dropdown-item" href="#">Alert 2</a>
+              <a class="dropdown-item" href="#">Alert 3</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="notificationsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <i class="fas fa-bell"></i>
+              <span class="badge badge-warning">2</span>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="notificationsDropdown">
+              <a class="dropdown-item" href="#">Notification 1</a>
+              <a class="dropdown-item" href="#">Notification 2</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <form class="form-inline my-2 my-lg-0">
+              <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            </form>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <i class="fas fa-user"></i> admin
+            </a>
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
+              <a class="dropdown-item" href="profile.html">Profile</a>
+              <a class="dropdown-item" href="settings.html">Settings</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#"><i class="fas fa-sign-out-alt"></i> Logout</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- top navbar -->
+
+  <!-- side container -->
+  <div class="container-fluid">
+    <div class="row">
+      <nav class="col-md-2 d-none d-md-block bg-light sidebar">
+        <div class="sidebar-sticky">
+          <h5 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
+            <span>Disaster Management</span>
+            <a class="d-flex align-items-center text-muted" href="#" aria-label="Add a new report">
+              <i class="fas fa-plus-circle"></i>
+            </a>
+          </h5>
+          <ul class="nav flex-column">
+            <li class="nav-item">
+              <a class="nav-link" href="admin.html" id="dashboardLink">
+                <i class="fas fa-tachometer-alt"></i>
+                Dashboard
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Resident-List.html" id="affectedAreasLink">
+                <i class="fas fa-users"></i>
+                Resident List
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="Response team.html" id="responseTeamsLink">
+                <i class="fas fa-user-tie"></i>
+                Response Teams
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="alerts and warning.html" id="alertsWarningsLink">
+                <i class="fas fa-bullhorn"></i>
+                Alerts & Warnings
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Relief-Funds.html" id="reliefFundsLink">
+                <i class="fas fa-money-bill-alt"></i>
+                Relief Funds
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Community-Requests.html" id="communityRequestsLink">
+                <i class="fas fa-comments"></i>
+                Community Requests
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <!-- side container -->
+
+      <!-- content -->
+      <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+        <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+          <h1 class="h2">Response Teams</h1>
+        </div>
+
+        <div class="row">
+            <!-- PNP Card -->
+            <div class="col-md-4 mb-4">
+              <div class="card h-100 shadow">
+                <div class="card-header bg-primary text-white d-flex align-items-center">
+                  <img src="pic/pnp-logo (2).png" alt="PNP Logo" class="mr-3" style="max-height: 50px;">
+                  <h5 class="card-title mb-0">Philippine National Police (PNP)</h5>
+                </div>
+                <div class="card-body">
+                  <p class="card-text">The Philippine National Police (PNP) is the armed, civilian national police force in the Philippines. Its mandate is to enforce the law, prevent and control crimes, maintain peace and order, and ensure public safety and internal security.</p>
+                </div>
+                <div class="card-footer">
+                  <p class="card-text"><i class="fas fa-phone"></i> <strong>Contact Info:</strong> 0917-123-4567</p>
+                  <a href="#" class="btn btn-primary">Learn More</a>
+                </div>
+              </div>
+            </div>
+          
+            <!-- BFP Card -->
+            <div class="col-md-4 mb-4">
+              <div class="card h-100 shadow">
+                <div class="card-header bg-danger text-white d-flex align-items-center">
+                  <img src="pic/bfp.png" alt="BFP Logo" class="mr-3" style="max-height: 50px;">
+                  <h5 class="card-title mb-0">Bureau of Fire Protection (BFP)</h5>
+                </div>
+                <div class="card-body">
+                  <p class="card-text">The Bureau of Fire Protection (BFP) is responsible for ensuring public safety through the prevention and suppression of all destructive fires. It also investigates the causes of fires and enforces fire safety laws.</p>
+                </div>
+                <div class="card-footer">
+                  <p class="card-text"><i class="fas fa-phone"></i> <strong>Contact Info:</strong> 0917-234-5678</p>
+                  <a href="#" class="btn btn-danger">Learn More</a>
+                </div>
+              </div>
+            </div>
+          
+            <!-- Additional Cards for Other Teams -->
+            <div class="col-md-4 mb-4">
+              <div class="card h-100 shadow">
+                <div class="card-header bg-secondary text-white d-flex align-items-center">
+                  <i class="fas fa-shield-alt mr-3"></i>
+                  <h5 class="card-title mb-0">Other Response Team</h5>
+                </div>
+                <div class="card-body">
+                  <p class="card-text">Information about another response team. This can include their roles, responsibilities, and any other relevant details.</p>
+                </div>
+                <div class="card-footer">
+                  <p class="card-text"><i class="fas fa-phone"></i> <strong>Contact Info:</strong> 0917-345-6789</p>
+                  <a href="#" class="btn btn-secondary">Learn More</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script>
+
+    // Sidebar link functionality
+const sidebarLinks = document.querySelectorAll('.sidebar .nav-link');
+sidebarLinks.forEach(link => {
+  link.addEventListener('click', () => {
+    sidebarLinks.forEach(link => link.classList.remove('active'));
+    link.classList.add('active');
+  });
+});
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="pictures/cawayan transparent.png" type="image/x-icon">
+    <title>Profilee</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link rel="stylesheet" href="system.css">
+</head>
+<body>
+    <nav class="navbar">
+        <a href="#" class="logo-link">
+            <img src="pictures/cawayan transparent.png" class="logo-a" alt="Logo">
+        </a>
+        <div class="menu">
+            <div class="menu-links">
+                <a href="system.html">Home</a>
+                <a href="about.html">About Us</a>
+                <a href="service.html">Service</a>
+                <a href="map.html">Map</a>
+                <a href="COM-REQ.html">Community Request</a>
+            </div>
+            <button class="log-in">Log-In</button>
+            <button class="sign-up">Sign Up</button>
+        </div>
+        <div class="fa-bar">
+            <i class="fas fa-bars"></i>
+        </div>
+    </nav>
+
+    <div class="content">
+        <div class="container">
+            <div class="logo-container">
+                <img src="pictures/cawayan transparent.png" class="logo" alt="Logo">
+            </div>
+            <div class="info">
+                <h1 class="h1">Welcome To</h1>
+                <h2 class="h2">Barangay Cawayan</h2>
+                <p class="p">Purok 6, Catarman Northern Samar<br>Open Hours of Barangay: Monday to Friday (8AM-5PM)<br>brgycawayan6@gmail.com</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Login Modal -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="closeLogin">&times;</span>
+            <h2>Login</h2>
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="loginEmail">Email</label>
+                    <input type="email" id="loginEmail" required>
+                </div>
+                <div class="form-group">
+                    <label for="loginPassword">Password</label>
+                    <input type="password" id="loginPassword" required>
+                </div>
+                <button type="submit" class="form-button">Login</button>
+                <p class="form-footer">Don't have an account? <span id="showSignup">Sign up here</span></p>
+            </form>
+        </div>
+    </div>
+
+    <!-- Signup Modal -->
+    <div id="signupModal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="closeSignup">&times;</span>
+            <h2>Sign Up</h2>
+            <form id="signupForm">
+                <div class="form-group">
+                    <label for="firstName">First Name</label>
+                    <input type="text" id="firstName" required>
+                </div>
+                <div class="form-group">
+                    <label for="lastName">Last Name</label>
+                    <input type="text" id="lastName" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="address">Address</label>
+                    <textarea id="address" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" required>
+                </div>
+                <div class="form-group">
+                    <label for="confirmPassword">Confirm Password</label>
+                    <input type="password" id="confirmPassword" required>
+                </div>
+                <button type="submit" class="form-button">Sign Up</button>
+                <p class="form-footer">Already have an account? <span id="showLogin">Login here</span></p>
+            </form>
+        </div>
+    </div>
+
+    <script src="system.js"></script>
+</body>
+</html>

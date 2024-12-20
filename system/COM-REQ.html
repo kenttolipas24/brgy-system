@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="pictures/cawayan transparent.png" type="image/x-icon">
+    <title>Profilee</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link rel="stylesheet" href="COM-REQ.css">
+    <link rel="stylesheet" href="service.css">
+</head>
+<body>
+    <nav class="navbar">
+        <a href="#" class="logo-link">
+            <img src="pictures/cawayan transparent.png" class="logo-a" alt="Logo">
+        </a>
+        <div class="space"></div>
+        <div class="menu">
+            <div class="menu-links">
+                <a href="system.html">Home</a>
+                <a href="about.html">About Us</a>
+                <a href="service.html">Service</a>
+                <a href="map.html">Map</a>
+                <a href="COM-REQ.html">Community Request</a>
+            </div>
+            <div class="button">
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container">
+        <h1>Community Requests</h1>
+        <div class="request-form">
+            <form id="request-form">
+                <label for="request-title">Request Title</label>
+                <input type="text" id="request-title" name="request-title" required>
+                <label for="request-description">Request Description</label>
+                <textarea id="request-description" name="request-description" rows="4" required></textarea>
+                <button type="submit">Submit Request</button>
+            </form>
+            <div class="response" id="response-message"></div>
+        </div>
+    </div>
+
+    <script src="COM REQ.js"></script>
+</body>
+</html>
